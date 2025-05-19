@@ -1,0 +1,116 @@
+---
+title: "Normalisation - Imputation - Combining data sets - PART 3"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+header-includes: "\\usepackage[export]{adjustbox}\n\\let\\includegraphicsbak\\includegraphics\n\\renewcommand*{\\includegraphics}[2][]{\\includegraphicsbak[frame,#1]{#2}}
+  \n"
+---
+# Beta and M value distributions autosomal chromosomes
+
+### QN normalised autosomal probes
+
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/beta_distribution_filtered_QN_1e16.pdf"))
+```
+
+### QN & BMIQ normalised autosomal probes
+
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/beta_distribution_filtered_QN_BMIQ_1e16.pdf"))
+```
+
+### Final beta values of autosomal probes - normalised and imputed
+
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Beta_distribution_final_autosomes.pdf"))
+```
+
+### Final M values of autosomal probes - normalised and imputed 
+
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Mvalue_distribution_final_autosomes.pdf"))
+```
+
+# Beta and M value distributions sex chromosomes
+
+### QN normalised X chr - Females
+
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/beta_distribution_filtered_QN_1e16_X_females.pdf"))
+```
+
+### Final beta values - normalised and imputed X chr - Females
+
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Beta_distribution_final_X_females.pdf"))
+```
+
+### QN normliased XY chr - Males
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/beta_distribution_filtered_QN_1e16_XY_males.pdf"))
+```
+
+### Final beta values - normalised and imputed XY chr - Males
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Beta_distribution_final_XY_males.pdf"))
+```
+
+# Final Beta and M value distributions combined datasets of autosomal and sex chromosomes
+
+### All beta values - Females
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/beta_distribution_final_comb_X_females.pdf"))
+```
+
+### All M values - Females
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Mvalue_distribution_final_comb_X_females.pdf"))
+```
+
+### All beta values - Males
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/beta_distribution_final_comb_XY_males.pdf"))
+```
+
+### All M values - Males
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Mvalue_distribution_final_comb_XY_males.pdf"))
+```
+
+### Beta values - combined dataset of Males and Females
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/beta_distribution_final_comb_males_females.pdf"))
+```
+
+### M values - combined dataset of Males and Females
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Mvalue_distribution_final_comb_males_females.pdf"))
+```
+
+# Outlier detection
+
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/PCA_FINAL_Mvalues.svg"))
+```
+
+# Batch effects
+
+```{r, out.width="800px", out.height="1600px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/PCA_final_Groups.svg"))
+```
+
+# Ancestry prediction
+
+### Distribution of normalised and imputed beta values of the 0 BP SNP probes
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Beta_distribution_filtered_QN_KNN_SNP0bp.pdf"))
+```
+
+### PCA of array snp probes combined with 0 BP SNP probes coloured by ancestry
+
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/PCA_Ancestry.svg"))
+```
+

@@ -1,0 +1,93 @@
+---
+title: "QC - PART TWO"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+header-includes: "\\usepackage[export]{adjustbox}\n\\let\\includegraphicsbak\\includegraphics\n\\renewcommand*{\\includegraphics}[2][]{\\includegraphicsbak[frame,#1]{#2}}
+  \n"
+---
+
+# Bisulfite conversion
+
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Bisulfite_histogram.pdf"))
+```
+
+# Methylation vs Unmethylation signal
+
+### Average intensity with threshold 10.5
+
+```{r, out.width="400px", out.height="400px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/MinfiIntensity_10.5.pdf"))
+
+```
+
+
+# Raw Beta and M-value distributions
+
+```{r, out.width="650px", out.height="500px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Beta_distribution_raw.pdf"))
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Mvalue_distribution_raw.pdf"))
+```
+
+# Filtered Beta and M-value distribution
+
+### Autosomal probes
+
+```{r, out.width="650px", out.height="500px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Beta_distribution_filtered_1e16.pdf"))
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Mvalue_distribution_filtered_1e16.pdf"))
+
+```
+
+### X-chromosomes of Females
+
+```{r, out.width="650px", out.height="500px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Beta_distribution_filtered_1e16_X_females.pdf"))
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Mvalue_distribution_filtered_1e16_X_females.pdf"))
+
+```
+
+### XY-chromosomes of Males
+
+```{r, out.width="650px", out.height="500px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Beta_distribution_filtered_1e16_XY_males.pdf"))
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Mvalue_distribution_filtered_1e16_XY_males.pdf"))
+
+```
+
+# Filtered Beta distribution 0BP snps probes
+
+### Autosomal probes
+
+```{r, out.width="650px", out.height="500px", message=FALSE, echo=FALSE}
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Beta_distribution_filtered_1e16_SNP0bp.pdf"))
+
+```
+
+# Filtered Outlier Check
+
+### Autosomal probes
+
+```{r, out.width="650px", out.height="400px", message=FALSE, echo=FALSE}
+
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Filtered_beta_outlier_check.pdf"))
+
+```
+
+### X chr probes - Females
+
+```{r, out.width="650px", out.height="400px", message=FALSE, echo=FALSE}
+
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Filtered_beta_outlier_check_X_females.pdf"))
+
+```
+
+### XY chr probes - Males
+
+```{r, out.width="650px", out.height="400px", message=FALSE, echo=FALSE}
+
+knitr::include_graphics(file.path(dir_gen,"output/Figures/Distributions/Filtered_beta_outlier_check_XY_males.pdf"))
+```
+
