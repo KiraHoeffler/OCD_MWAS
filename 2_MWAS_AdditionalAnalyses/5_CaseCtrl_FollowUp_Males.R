@@ -163,7 +163,7 @@ write_xlsx(combp_sign, "output_M/Tables/DMRs_combp_CaseCtrl_5CtrlPCs_2AncPCs_fil
 ################################################################################
 
 # MANHATTAN PLOT
-Manhattan_plot <- Manhattan(DMPs_anno, "M", "BH", combp_sign, min_DMR_p, min_sign)
+Manhattan_plot <- Manhattan(DMPs_anno, "M", "BH", combp_sign)
 
 ggsave("output_M/Figures/Manhattan_CaseCtrl_5CtrlPCs_2AncPCs.svg", Manhattan_plot, units = "cm", width = 13, height = 9, dpi = 300)
 ggsave("output_M/Figures/Manhattan_CaseCtrl_5CtrlPCs_2AncPCs.pdf", Manhattan_plot, units = "cm", width = 13, height = 9, dpi = 300)
