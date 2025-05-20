@@ -236,7 +236,7 @@ write_xlsx(combp_sign, "output_meta/Tables/DMRs_combp_CaseCtrl_filtered_BACON.xl
 ################################################################################
 
 # MANHATTAN PLOT
-Manhattan_plot <- Manhattan(DMPs_anno, "FM", "BH",combp_sign, min_DMR_p, min_sign)
+Manhattan_plot <- Manhattan(DMPs_anno, "FM", "BH",combp_sign)
 
 ggsave("output_meta/Figures/Manhattan_CaseCtrl.svg", Manhattan_plot, units = "cm", width = 13, height = 9, dpi = 300)
 ggsave("output_meta/Figures/Manhattan_CaseCtrl.pdf", Manhattan_plot, units = "cm", width = 13, height = 9, dpi = 300)
